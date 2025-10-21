@@ -1,0 +1,72 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "newValue",
+						"type": "uint256"
+					}
+				],
+				"name": "setValue",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "value",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/SimpleImplementation.sol": "SimpleImplementation"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/SimpleImplementation.sol": {
+			"keccak256": "0x2876f520ebe34fe866b2cd51159e62dee749cc03c881006c18d91ea1aaa1d16e",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://0d670a00da1f928be75d804e3c7562ee9c3d5d191494563d5b259734ff0b129a",
+				"dweb:/ipfs/QmcaBhRWVKj3vrmoPVd1yMKPB1NexdvB4gB9nuc9bzuKVT"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,19 +1,35 @@
-// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
 contract SimpleProxy {
-    address public implementation;
+    // EIP-1967 storage slot for implementation
+    // keccak256("eip1967.proxy.implementation") - 1
+    bytes32 private constant IMPLEMENTATION_SLOT = 
+        0x360894a13ba1a3210667c828492db98dca3e2076cc3735a920a3ca505d382bbc;
 
     constructor(address _implementation) {
-        implementation = _implementation;
+        _setImplementation(_implementation);
+    }
+
+    function implementation() public view returns (address impl) {
+        bytes32 slot = IMPLEMENTATION_SLOT;
+        assembly {
+            impl := sload(slot)
+        }
     }
 
     function upgradeTo(address newImplementation) public {
-        implementation = newImplementation;
+        _setImplementation(newImplementation);
+    }
+
+    function _setImplementation(address newImplementation) private {
+        bytes32 slot = IMPLEMENTATION_SLOT;
+        assembly {
+            sstore(slot, newImplementation)
+        }
     }
 
     fallback() external payable {
-        address impl = implementation;
+        address impl = implementation();
         require(impl != address(0), "No implementation set");
         assembly {
             let ptr := mload(0x40)
@@ -26,4 +42,6 @@ contract SimpleProxy {
             default { return(ptr, size) }
         }
     }
+
+    receive() external payable {}
 }
