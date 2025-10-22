@@ -1,0 +1,47 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"title": "Library for AppStorage layout with shared variables",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "Provides a common storage slot for shared contract state used by facets.",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/LibAppStorage.sol": "LibAppStorage"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/LibAppStorage.sol": {
+			"keccak256": "0x2c478066d8cd0659391cd102c75d8e7e1f31b80f585f38d4dddd8e0667238759",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://de51e647d1b17eccdcdd8dac3c1cdb233ab99eb3378263f729c3ffa274e3e4b5",
+				"dweb:/ipfs/QmbYgGtJLyQMDVV6xUedzDeKZTHk6FE28aXmygdh4pWP7c"
+			]
+		}
+	},
+	"version": 1
+}
